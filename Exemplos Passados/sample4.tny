@@ -1,0 +1,46 @@
+/* Um programa para calcular mdc */
+int gdc (int u, int v)
+{
+   if (v == 0){
+        if(u == 0){
+            u = v;
+        }
+        else{
+            return v;
+        }
+        return u;
+    }
+   else return gdc(v,u-u/v*v);
+   /* u-u / v*v == u mod v */
+}
+
+int fibonacci(int n){
+    int c;
+    int next;
+    int first;
+    int second;
+    first = 0;
+    second = 1;
+    c = 0;
+    while(c <= n){
+        if(c <= 1)
+            next = c;
+        else{
+            next = first + second;
+            first = second;
+            second = next; /* Estava second = first */
+        }
+        c = c + 1;
+    }
+    return next;
+}
+
+void main(void)
+{
+   int x;
+   int y;
+   x = input();
+   y = input();
+   output(gdc(x,y));
+   output(fibonacci(x));
+}

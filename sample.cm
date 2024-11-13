@@ -1,0 +1,28 @@
+/*
+  Testar as seguintes funções:
+  * input: OK
+  * output: OK
+  * delay: OK
+  * HD_Transfer_MI: OK
+  * HD_Write
+  * HD_Read
+  * saveRF_in_HD
+  * recoveryRF
+  * setMultiprog:
+  * setQuantum: OK
+  * setAddrCS: OK
+  * setNumProg
+  * execProcess
+  * getPC_Process
+  * returnMain
+*/
+
+void main(void){
+  int dest; int value;
+  dest = input();
+  output(dest);
+  value = input();
+  output(value);
+  send(dest, value);
+  output(receive()+3);
+}

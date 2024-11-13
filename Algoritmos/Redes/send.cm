@@ -1,0 +1,8 @@
+void main(void){
+  int dest; int value;
+  dest = input();
+  output(dest);
+  value = input();
+  output(value);
+  send(dest, value);
+}
